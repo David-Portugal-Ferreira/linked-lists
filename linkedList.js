@@ -41,6 +41,23 @@ class LinkedList {
         return tmp;
     }
     at(index) {
+        let tmp = this.head;
+        let currentIndex = 0;
+        if(index === currentIndex) return {value: tmp.value, nextNode: tmp.nextNode.value}
+
+        while(index !== currentIndex && tmp !== null) {
+            tmp = tmp.nextNode;
+            currentIndex++;
+        }
+        if(tmp === null) {
+            return "No index"
+        }
+
+        if (tmp.nextNode === null) {
+            return {value: tmp.value, nextNode: null}
+        } else {
+            return {value: tmp.value, nextNode: tmp.nextNode.value}
+        }
 
     }
     pop() {

@@ -9,4 +9,5 @@ list.prepend("bird");
 // console.log(list.head)
 // console.log(list.size())
 // console.log(list.top())
-console.log(list.tail())
+// console.log(list.tail())
+console.log(list.at(2));
