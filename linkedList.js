@@ -6,12 +6,11 @@ class LinkedList {
         if(this.head === null) {
             this.head = new Node(value)
         } else {
-            let tmp = this.head.nextNode;
-            console.log(tmp, value);
-            while(tmp !== null) {
-                tmp = tmp.nextNode
+            let tmp = this.head;
+            while(tmp.nextNode !== null) {
+                tmp = tmp.nextNode;
             }
-            tmp = new Node(value);
+            tmp.nextNode = new Node(value);
         }
     }
     prepend(value) {
@@ -51,9 +50,6 @@ class LinkedList {
 }
 
 class Node {
-    value = null
-    nextNode = null
-
     constructor(value = null, nextNode = null) {
         this.value = value;
         this.nextNode = nextNode;
