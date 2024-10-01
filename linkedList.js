@@ -34,7 +34,11 @@ class LinkedList {
         return {data, nextNode};
     }
     tail() {
-        
+        let tmp = this.head;
+        while(tmp.nextNode !== null) {
+            tmp = tmp.nextNode;
+        }
+        return tmp;
     }
     at(index) {
 
