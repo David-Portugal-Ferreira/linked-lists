@@ -88,7 +88,21 @@ class LinkedList {
         }
     }
     find(value) {
+        let tmp = this.head;
+        let currentIndex = 0;
 
+        if(tmp.value === value) return currentIndex;
+
+        currentIndex++;
+        while(tmp.nextNode !== null) {
+            tmp = tmp.nextNode;
+            if (tmp.value === value) return currentIndex;
+            currentIndex++;
+        }
+
+        if(tmp.nextNode === null) {
+            return false;
+        }
     }
     toString() {
 
