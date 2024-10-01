@@ -61,7 +61,15 @@ class LinkedList {
 
     }
     pop() {
+        let tmp = this.head;
+        if(tmp === null) return "The list is empty";
 
+        let prevNode = null;
+        while(tmp.nextNode !== null) {
+            prevNode = tmp;
+            tmp = tmp.nextNode;
+        }
+        prevNode.nextNode = null;
     }
     contains(value) {
 
