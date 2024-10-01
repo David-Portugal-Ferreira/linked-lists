@@ -13,3 +13,4 @@ list.prepend("bird");
 // console.log(list.at(2));
 // console.log(list.pop());
 // console.log(list.head)
+console.log(list.contains("bird"))

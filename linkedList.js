@@ -72,7 +72,20 @@ class LinkedList {
         prevNode.nextNode = null;
     }
     contains(value) {
+        let tmp = this.head;
 
+        if(tmp.value === value) return true;
+
+        while(tmp.nextNode !== null) {
+            if(tmp.value === value) return true;
+            tmp = tmp.nextNode;
+        }
+
+        if(tmp.value === value) {
+            return true;
+        } else {
+            return false;
+        }
     }
     find(value) {
 
