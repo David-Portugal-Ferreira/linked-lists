@@ -28,9 +28,11 @@ class LinkedList {
         }
         return numberOfNodes
     }
-    // head(){
-
-    // }
+    top(){
+        let data = this.head.value;
+        let nextNode = this.head.nextNode.value;
+        return {data, nextNode};
+    }
     tail() {
         
     }
