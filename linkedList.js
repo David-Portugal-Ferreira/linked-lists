@@ -116,12 +116,19 @@ class LinkedList {
         return resultString += "null";
     }
     insertAt(value, index) {
+        let tmp = this.head;
+        let currentIndex = 0;
+        let prevNode = null;
 
+        if (index === currentIndex) {
+            this.head = new Node(value);
+            this.head.nextNode = tmp;
+            return;
+        }
     }
     removeAt(index) {
 
     }
-    
 }
 
 class Node {
