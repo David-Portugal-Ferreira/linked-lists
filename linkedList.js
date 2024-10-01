@@ -125,6 +125,16 @@ class LinkedList {
             this.head.nextNode = tmp;
             return;
         }
+        console.log(currentIndex)
+        // currentIndex++;
+        while(tmp !== null && (currentIndex !== index)) {
+            console.log(currentIndex)
+            prevNode = tmp;
+            tmp = tmp.nextNode;
+            currentIndex++;
+        }
+
+        console.log(tmp);
     }
     removeAt(index) {
 
