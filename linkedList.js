@@ -105,7 +105,15 @@ class LinkedList {
         }
     }
     toString() {
+        let tmp = this.head;
+        let resultString = "";
 
+        while(tmp !== null) {
+            resultString += `( ${tmp.value} ) -> `;
+            tmp = tmp.nextNode;
+        }
+
+        return resultString += "null";
     }
     insertAt(value, index) {
 
