@@ -23,5 +23,5 @@ list.append("hamster");
 list.append("snake");
 list.append("turtle");
 // console.log(list.toString());
-list.insertAt("horse", 4);
-// console.log(list.toString());
+list.insertAt("horse", 7);
+console.log(list.toString());
