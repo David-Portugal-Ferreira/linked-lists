@@ -23,5 +23,7 @@ list.append("hamster");
 list.append("snake");
 list.append("turtle");
 // console.log(list.toString());
-list.insertAt("horse", 7);
+// list.insertAt("horse", 7);
+// console.log(list.toString());
+list.removeAt(6)
 console.log(list.toString());

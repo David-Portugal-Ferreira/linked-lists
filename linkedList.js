@@ -140,7 +140,27 @@ class LinkedList {
     }
   }
   removeAt(index) {
-    
+    let tmp = this.head;
+    let currentIndex = 0;
+
+    if (index === 0) {
+      this.head = tmp.nextNode;
+      return;
+    }
+
+    currentIndex++
+
+    while (tmp.nextNode !== null && currentIndex !== (index  - 1)) {
+      tmp = tmp.nextNode;
+      currentIndex++;
+    }
+
+    if (tmp.nextNode === null) {
+      console.log("No such index is present in the list");
+      return;
+    } else if (tmp.nextNode !== null){
+      tmp.nextNode = tmp.nextNode.nextNode;
+    }
   }
 }
 
